@@ -11,63 +11,104 @@ export class BodyComponent implements OnInit {
 
   ngOnInit() {
   }
-  
-  escuchar(){
+
+  escuchar() {
 
     console.log("Estoy dentro");
     var message = document.querySelector('#message');
-      var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-      var SpeechGramarList = SpeechGramarList || webkitSpeechGrammarList;
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var SpeechGramarList = SpeechGramarList || webkitSpeechGrammarList;
 
-      var grammer = '#JSGF V1.0;';
+    var grammer = '#JSGF V1.0;';
 
-      var recognition = new SpeechRecognition();
-      var SpeechRecognitionGrammarList = new SpeechGramarList();
-      SpeechRecognitionGrammarList.addFromString(grammer, 1);
+    var recognition = new SpeechRecognition();
+    var SpeechRecognitionGrammarList = new SpeechGramarList();
+    SpeechRecognitionGrammarList.addFromString(grammer, 1);
 
-      recognition.grammers = SpeechRecognitionGrammarList;
-      recognition.lang = 'es-MX';
-      recognition.interimResults = false;
+    recognition.grammers = SpeechRecognitionGrammarList;
+    recognition.lang = 'es-MX';
+    recognition.interimResults = false;
 
-      //onresult
-      //onspeechend
-      //onerror
+    //onresult
+    //onspeechend
+    //onerror
 
-      recognition.onresult = function (event) {
-        var last = event.results.length - 1;
-        var command = event.results[last][0].transcript;
-        var res = message.textContent = command;
-             //alert(res);
-             document.getElementById("message").value = res;
+    recognition.onresult = function (event) {
+      var last = event.results.length - 1;
+      var command = event.results[last][0].transcript;
+      var res = message.textContent = command;
+      //alert(res);
+      document.getElementById("message").value = res;
 
-             if (res == "insertar zapato") {
-              var codigo = prompt("Diga el codigo", '');
+      if (res == "insertar zapato") {
+        var codigo = prompt("Diga el codigo", '');
+        if (codigo == '' || codigo == null) {
+          alert("intentelo nuevamente");
+        } else {
+          codigo = prompt("Diga el tipo", '');
+          if (codigo == '' || codigo == null) {
+            alert("intentelo nuevamente");
+          } else {
+            codigo = prompt("Diga el tamaño", '');
+            if (codigo == '' || codigo == null) {
+              alert("intentelo nuevamente");
+            } else {
+              codigo = prompt("Diga la cantidad", '');
               if (codigo == '' || codigo == null) {
                 alert("intentelo nuevamente");
-              }else{
-                codigo = prompt("Diga el tipo", '');
+              } else {
+                codigo = prompt("Diga la marca", '');
                 if (codigo == '' || codigo == null) {
                   alert("intentelo nuevamente");
-                }else{
-                  codigo = prompt("Diga el tamaño", '');
+                } else {
+                  codigo = prompt("Diga el color", '');
+                  if (codigo == '' || codigo == null) {
+                    alert("intentelo nuevamente");
+                  } else {
+                    codigo = prompt("Diga el precio", '');
+                    if (codigo == '' || codigo == null) {
+                      alert("intentelo nuevamente");
+                    } else {
+                      codigo = prompt("Diga el modelo", '');
+                      if (codigo == '' || codigo == null) {
+                        alert("intentelo nuevamente");
+                      } else {
+                        codigo = prompt("Diga la descripcion", '');
+                        if (codigo == '' || codigo == null) {
+                          alert("intentelo nuevamente");
+                        } else {
+                          var confirmar = confirm("¿esta seguro de insertar los datos?");
+                        }
+                      }
+                    }
+                  }
                 }
               }
-
-             }
-
+            }
+          }
+        }
       }
 
-      recognition.onspeechend = function () {
-        recognition.stop();
+      if (res == "eliminar zapato") {
+        confirm("¿Estas seguro de eliminarlo?");
       }
-      recognition.onerror = function (event) {
-        message.textContent = 'error in recognition: ' + event.console.error();
-      }
-      document.querySelector('#botones').addEventListener('click', function () { 
-        recognition.start() });
 
-  }    
-  
+
+
+    }
+
+    recognition.onspeechend = function () {
+      recognition.stop();
+    }
+    recognition.onerror = function (event) {
+      message.textContent = 'error in recognition: ' + event.console.error();
+    }
+    document.querySelector('#botones').addEventListener('click', function () {
+      recognition.start()
+    });
+
+  }
+
 
 
 }
