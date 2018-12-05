@@ -1,0 +1,13 @@
+#uno{
+    height: 550px;
+    background: teal;
+    border-radius: 10px;
+}
+form{
+    height: auto;
+    width: 800px;
+    margin: auto;
+    padding-top: 80px;
+    
+   
+}
