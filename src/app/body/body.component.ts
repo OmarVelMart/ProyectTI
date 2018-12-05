@@ -91,6 +91,7 @@ export class BodyComponent implements OnInit {
 
       if (res == "eliminar zapato") {
         confirm("¿Estas seguro de eliminarlo?");
+        alert("cambios");
       }
 
 
