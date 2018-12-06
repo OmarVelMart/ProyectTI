@@ -5,8 +5,10 @@
         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ventana1" data-whatever="@mdo">Insertar
           datos</button>
       </div>
-      <button class="btn btn-primary btn-sm" id="btn_modificar"> Modificar</button>
-      <button class="btn btn-primary btn-sm" id="btn_modificar"> Eliminar</button>
+      <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ventana11" data-whatever="@mdo">
+        Modificar</button>
+      <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ventana13" data-whatever="@mdo">
+        Eliminar</button>
       <button class="btn btn-primary btn-sm" id="btn_modificar"> Mostrar </button>
     </div>
 
@@ -39,7 +41,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_2" data-target="#ventana2">Siguiente</button>
+          <button type="button" class="btn btn-primary" (click)="ventana()" data-toggle="modal" id="btn_2" data-target="#ventana2">Siguiente</button>
         </div>
       </div>
     </div>
@@ -61,9 +63,9 @@
               <label for="recipient-name" class="col-form-label">Insertar</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">TIPO</button>
+                  <button class="btn btn-primary btn-sm" (click)="escuchar2()" id="botones2">Tipo</button>
                 </div>
-                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                <input name="txtText" id='message2' type="text" class="form-control" placeholder="Presiona para escucharte"
                   value="">
               </div>
             </div>
@@ -93,9 +95,9 @@
               <label for="recipient-name" class="col-form-label">Insertar</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Tamaño</button>
+                  <button class="btn btn-primary btn-sm" (click)="escuchar3()" id="botones3">Tamaño</button>
                 </div>
-                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                <input name="txtText" id='message3' type="text" class="form-control" placeholder="Presiona para escucharte"
                   value="">
               </div>
             </div>
@@ -125,9 +127,9 @@
               <label for="recipient-name" class="col-form-label">Insertar</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Cantidad</button>
+                  <button class="btn btn-primary btn-sm" (click)="escuchar4()" id="botones4">Cantidad</button>
                 </div>
-                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                <input name="txtText" id='message4' type="text" class="form-control" placeholder="Presiona para escucharte"
                   value="">
               </div>
             </div>
@@ -157,9 +159,9 @@
               <label for="recipient-name" class="col-form-label">Insertar</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Marca</button>
+                  <button class="btn btn-primary btn-sm" (click)="escuchar5()" id="botones5">Marca</button>
                 </div>
-                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                <input name="txtText" id='message5' type="text" class="form-control" placeholder="Presiona para escucharte"
                   value="">
               </div>
             </div>
@@ -189,9 +191,9 @@
               <label for="recipient-name" class="col-form-label">Insertar</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Precio</button>
+                  <button class="btn btn-primary btn-sm" (click)="escuchar6()" id="botones6">Precio</button>
                 </div>
-                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                <input name="txtText" id='message6' type="text" class="form-control" placeholder="Presiona para escucharte"
                   value="">
               </div>
             </div>
@@ -221,9 +223,9 @@
               <label for="recipient-name" class="col-form-label">Insertar</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Color</button>
+                  <button class="btn btn-primary btn-sm" (click)="escuchar7()" id="botones7">Color</button>
                 </div>
-                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                <input name="txtText" id='message7' type="text" class="form-control" placeholder="Presiona para escucharte"
                   value="">
               </div>
             </div>
@@ -253,9 +255,9 @@
               <label for="recipient-name" class="col-form-label">Insertar</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Modelo</button>
+                  <button class="btn btn-primary btn-sm" (click)="escuchar8()" id="botones8">Modelo</button>
                 </div>
-                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                <input name="txtText" id='message8' type="text" class="form-control" placeholder="Presiona para escucharte"
                   value="">
               </div>
             </div>
@@ -301,6 +303,7 @@
     </div>
   </div>
   <!--ventanta 10-->
+  <!-- Modal -->
   <div class="modal fade" id="ventana10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -311,15 +314,36 @@
           </button>
         </div>
         <div class="modal-body">
+          ...
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 11-->
+  <div class="modal fade" id="ventana11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modificar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
           <form id="form2">
             <div class="form-group">
 
-              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <label for="recipient-name" class="col-form-label">¿Que campo desdeas modificar?</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Descripcion</button>
+                  <button class="btn btn-primary btn-sm" (click)="escuchar11()" id="botones11">Escuchar</button>
                 </div>
-                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                <input name="txtText" id='message11' type="text" class="form-control" placeholder="Presiona para escucharte"
                   value="">
               </div>
             </div>
@@ -327,9 +351,78 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_10">Siguiente</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_2" data-target="#ventana12">Siguiente</button>
         </div>
       </div>
     </div>
   </div>
+
+  <!--ventanta 12-->
+  <div class="modal fade" id="ventana13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Eliminar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar13()" id="botones13">Escuchar</button>
+                </div>
+                <input name="txtText" id='message13' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_2" (click)="eliminar()">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+      <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Code</th>
+              <th scope="col">TypeShoes</th>
+              <th scope="col">Size</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Color</th>
+              <th scope="col">Model</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              
+            </tr>
+            <tr>
+              <th scope="row"></th>
+             
+            </tr>
+          </tbody>
+        </table>
+  </section>
+
+
+
 </section>
