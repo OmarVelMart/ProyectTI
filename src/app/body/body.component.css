@@ -3,11 +3,20 @@
     background: teal;
     border-radius: 10px;
 }
-form{
+#form1{
     height: auto;
-    width: 800px;
+    width: 330px;
     margin: auto;
     padding-top: 80px;
     
    
+}
+#recipient-name{
+    height: auto;
+    width: 470px;
+}
+#form2{
+    height: auto;
+    width: auto;
+    margin: auto;
 }

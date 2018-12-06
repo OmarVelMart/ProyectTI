@@ -1,12 +1,335 @@
 <section id="uno">
-  <form>
+  <form id="form1">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Escuchar</button>
+        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ventana1" data-whatever="@mdo">Insertar
+          datos</button>
       </div>
-      <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte" value="">
-         </div>
-         <button type="button"  class="btn btn-primary btn-blok" id="send">Enviar</button>
+      <button class="btn btn-primary btn-sm" id="btn_modificar"> Modificar</button>
+      <button class="btn btn-primary btn-sm" id="btn_modificar"> Eliminar</button>
+      <button class="btn btn-primary btn-sm" id="btn_modificar"> Mostrar </button>
+    </div>
+
   </form>
 
+  <!--ventanta 1-->
+  <div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Codigo</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_2" data-target="#ventana2">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 2-->
+  <div class="modal fade" id="ventana2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">TIPO</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_3" data-target="#ventana3">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 3-->
+  <div class="modal fade" id="ventana3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Tamaño</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_4" data-target="#ventana4">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 4-->
+  <div class="modal fade" id="ventana4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Cantidad</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_5" data-target="#ventana5">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 5-->
+  <div class="modal fade" id="ventana5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Marca</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_6" data-target="#ventana6">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 6-->
+  <div class="modal fade" id="ventana6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Precio</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_7" data-target="#ventana7">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 7-->
+  <div class="modal fade" id="ventana7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Color</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_8" data-target="#ventana8">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 8-->
+  <div class="modal fade" id="ventana8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Modelo</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_9" data-target="#ventana9">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 9-->
+  <div class="modal fade" id="ventana9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Descripcion</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_9" data-target="#ventana10">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ventanta 10-->
+  <div class="modal fade" id="ventana10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form2">
+            <div class="form-group">
+
+              <label for="recipient-name" class="col-form-label">Insertar</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-primary btn-sm" (click)="escuchar()" id="botones">Descripcion</button>
+                </div>
+                <input name="txtText" id='message' type="text" class="form-control" placeholder="Presiona para escucharte"
+                  value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" id="btn_10">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

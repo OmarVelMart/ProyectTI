@@ -39,7 +39,7 @@ export class BodyComponent implements OnInit {
       var res = message.textContent = command;
       //alert(res);
       document.getElementById("message").value = res;
-
+/*
       if (res == "insertar zapato") {
         var codigo = prompt("Diga el codigo", '');
         if (codigo == '' || codigo == null) {
@@ -88,6 +88,7 @@ export class BodyComponent implements OnInit {
           }
         }
       }
+      */
 
       if (res == "eliminar zapato") {
         confirm("¿Estas seguro de eliminarlo?");
@@ -110,6 +111,8 @@ export class BodyComponent implements OnInit {
 
   }
 
+  
+  
 
 
 }
